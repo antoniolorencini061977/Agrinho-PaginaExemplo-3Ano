@@ -8,25 +8,26 @@
   <link rel="stylesheet" href="style.css">
 
 </head>
+<div>
+    <button onclick="scrollToBottom()" id="btnFim" title="Ir para o fim">⬇️ Ir para o final</button>
 
-<button onclick="scrollToBottom()" id="btnFim" title="Ir para o fim">⬇️ Ir para o final</button>
+    <script>
+      // Função para rolar suavemente até o final da página
+      function scrollToBottom() {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      }
 
-<script>
-  // Função para rolar suavemente até o fim
-  function scrollToBottom() {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-  }
-
-  // Mostrar/ocultar o botão ao rolar
-  window.addEventListener('scroll', function () {
-    const btn = document.getElementById("btnFim");
-    if (document.body.scrollTop < 100 && document.documentElement.scrollTop < 100) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
-    }
-  });
-</script>
+      // Mostrar/ocultar o botão ao rolar
+      window.addEventListener('scroll', function () {
+        const btn = document.getElementById("btnFim");
+        if (document.body.scrollTop < 100 && document.documentElement.scrollTop < 100) {
+          btn.style.display = "block";
+        } else {
+          btn.style.display = "none";
+        }
+      });
+    </script>
+  </div>
 
 <body>
   <header>
