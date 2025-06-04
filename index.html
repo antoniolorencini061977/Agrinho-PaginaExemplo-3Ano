@@ -9,25 +9,25 @@
 
 </head>
 <div>
-    <button onclick="scrollToBottom()" id="btnFim" title="Ir para o fim">⬇️ Ir para o final</button>
+  <button onclick="scrollToBottom()" id="btnFim" title="Ir para o fim">⬇️ Ir para o final</button>
 
-    <script>
-      // Função para rolar suavemente até o final da página
-      function scrollToBottom() {
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  <script>
+    // Função para rolar suavemente até o final da página
+    function scrollToBottom() {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    // Mostrar/ocultar o botão ao rolar
+    window.addEventListener('scroll', function () {
+      const btn = document.getElementById("btnFim");
+      if (document.body.scrollTop < 100 && document.documentElement.scrollTop < 100) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
       }
-
-      // Mostrar/ocultar o botão ao rolar
-      window.addEventListener('scroll', function () {
-        const btn = document.getElementById("btnFim");
-        if (document.body.scrollTop < 100 && document.documentElement.scrollTop < 100) {
-          btn.style.display = "block";
-        } else {
-          btn.style.display = "none";
-        }
-      });
-    </script>
-  </div>
+    });
+  </script>
+</div>
 
 <body>
   <header>
@@ -143,27 +143,27 @@
 
   </main>
 
+  <div>
+    <button onclick="scrollToTop()" id="btnTopo" title="Voltar ao topo">⬆️ voltar ao topo</button>
 
-  <button onclick="scrollToTop()" id="btnTopo" title="Voltar ao topo">⬆️ voltar ao topo</button>
-
-  <script>
-    // Função para rolar suavemente para o topo
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Mostrar/ocultar o botão ao rolar
-    window.onscroll = function () {
-      const btn = document.getElementById("btnTopo");
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        btn.style.display = "block";
-      } else {
-        btn.style.display = "none";
+    <script>
+      // Função para rolar suavemente para o topo
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
-    };
-  </script>
 
-
+      // Mostrar/ocultar o botão ao rolar
+      window.onscroll = function () {
+        const btn = document.getElementById("btnTopo");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          btn.style.display = "block";
+        } else {
+          btn.style.display = "none";
+        }
+      };
+    </script>
+  </div>
+  
   <footer>
     <p>Projeto Agrinho 2025 | Criado por xxxxxxxx | Foco na conexão campo-cidade</p>
     <p> Criado por xxxxxx | Colégio Cívico Militar - Monteiro Lobato - Umuarama Pr</p>
