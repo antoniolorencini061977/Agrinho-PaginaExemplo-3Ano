@@ -75,7 +75,7 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 30px;
+    padding: 15px;
     border-radius: 50%;
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     transition: background-color 0.3s;
@@ -92,7 +92,7 @@ body {
   top: 40px;
   left: 30px;
   z-index: 99;
-  font-size: 1rem;
+  font-size: 0.85rem;
   background-color: #4CAF50;
   color: white;
   border: none;
